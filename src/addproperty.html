@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./w3.css">
+    <style>
+        a{
+            cursor: pointer;
+        }
+
+        .background{
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-bar w3-padding">
+        <span class="w3-bar-item w3-text-blue">
+            <b>REAL CHAIN</b>
+        </span>
+        <a class="w3-bar-item w3-text-blue" href="./index.html">Home</a>
+        <a class="w3-bar-item w3-text-blue" href="./properties.html">Properties</a>
+        <a class="w3-bar-item w3-text-blue" href="./addproperty.html">New Property</a>
+        <div class="w3-right">
+            <button class="w3-btn w3-bar-item w3-blue w3-round">Connect Wallet</button>
+        </div>
+    </div>
+    <br />
+    <div class="w3-auto" style="width: 40rem">
+        <form enctype="multipart/form-data" class="w3-card w3-padding w3-round">
+            <h4 class="w3-text-blue">New Property</h4>
+            <label for="">Property Name</label>
+            <input type="text" id="propertyName" class="w3-input w3-border w3-round" />
+            <label for="">Price</label>
+            <input type="number" id="propertyPrice" class="w3-input w3-border w3-round" />
+            <label for="">Image</label>
+            <input type="text" id="propertyImage" class="w3-input w3-border w3-round" />
+            <br/>
+            <button class="w3-btn w3-blue" type="button" onclick="addProperty()">Save</button>
+        </form>
+    </div>
+    
+    <script src="./web3.min.js"></script>
+    <script src="./RealEstate.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
