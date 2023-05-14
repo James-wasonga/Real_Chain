@@ -1,4 +1,4 @@
-const abi = [
+const abi =  [
   {
     "anonymous": false,
     "inputs": [
@@ -161,5 +161,18 @@ const abi = [
     "stateMutability": "payable",
     "type": "function",
     "payable": true
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_propertyId",
+        "type": "uint256"
+      }
+    ],
+    "name": "changeOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   }
 ];

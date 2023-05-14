@@ -37,7 +37,10 @@ loadWeb3();
 // const address="0x6ECdb66a0AaB4433A12C00c54403a84df594C8d3";
 
 // const newAddress = "0x2437438489e2E5A55e6A04e4CA2F5001D5DF28Ce"
-const newAddress = "0x0dd42a7243B77138c1815526b66A03d7E570663f"
+// const newAddress = "0x0dd42a7243B77138c1815526b66A03d7E570663f"
+// const newAddress = "0xEc580fA6004Cb4E4F9BDe56C61Ea59F0f79B47D2"
+// const newAddress = "0x599DcB2585B644851191627b3Ed96bb9203be0B2"
+const newAddress = "0x411eAac8281505AFEDb04598282297F52D662745"
 
 var contract = new web3.eth.Contract(abi, newAddress);
 async function upload(){
@@ -170,17 +173,19 @@ async function viewmyProperties() {
     const accounts = await ethereum.request({method: "eth_requestAccounts"});
     const account = accounts[0];
     contract.methods.propertyCounter().call().then((data) => {
+        
         for (let i = 1; i <= data; i++){
             contract.methods.properties(i).call().then(({image,propertyName, isForSale, location, price, owner}) => {
-
-                if(owner = account){
+                console.log(owner.toLowerCase());
+                console.log(account.toLowerCase());
+                if(owner.toLowerCase() == account.toLowerCase()){
                     const ethPrice = web3.utils.fromWei(price.toString(), "ether");
                     properties.push({i, image, isForSale, location, ethPrice, owner});
                     document.getElementById("myProps").innerHTML += `
                     <tr>
                         <td>${propertyName}</td>
                         <td>${ethPrice} ETH</td>
-                        <td><button class="w3-button w3-round-xlarge w3-small w3-border w3-border-blue">Make Available</button></td>
+                        <td><button class="w3-button w3-round-xlarge w3-small w3-border w3-border-blue" onclick="makeAvailable(${i})">Make Available</button></td>
                     </tr>
                     `
                 }
@@ -197,6 +202,12 @@ viewmyProperties();
 
 function openPage(i){
     window.location.href = "./details.html?" + i
+}
+
+async function makeAvailable(id){
+    const accounts = await ethereum.request({method: "eth_requestAccounts"});
+    const account = accounts[0];
+    await contract.methods.changeOwnership(id).send({from: account}).then((message) => console.log(message));
 }
 
 async function displayPageData(){

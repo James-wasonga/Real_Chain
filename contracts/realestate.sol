@@ -28,16 +28,15 @@ contract RealEstate {
         require(property.isForSale == true, "This property is not for sale.");
         require(msg.value == property.price, "You need to pay the full price of the property.");
         address payable previousOwner = payable(property.owner);
-        property.owner = msg.sender;
-        property.isForSale = false;
-        properties[_propertyId] = property;
+        properties[_propertyId].owner = msg.sender;
+        properties[_propertyId].isForSale = false;
         previousOwner.transfer(msg.value);
         emit TransferProperty(_propertyId, previousOwner, msg.sender);
     }
-    function changeOwnership(uint256 _propertyId) public payable{
+    function changeOwnership(uint256 _propertyId) public{
         Property memory property = properties[_propertyId];
         require(property.owner ==  msg.sender, "not your property");
-        property.isForSale = true;
+        properties[_propertyId].isForSale = true;
     }
     
 }   
