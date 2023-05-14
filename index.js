@@ -31,9 +31,13 @@ app.get("/w3.css", (req, res) => {
 app.post('/upload', (req, res) => {
     console.log(req.files);
 
+    const { files } = req.files;
+    // console.log(image);
+    if(!files) return res.sendStatus(400);
+    files.mv(__dirname + '/src/images/' + files.name)
 
-    // res.send(req);
-    res.sendStatus(200);
+    const u = '/images/' + files.name;
+    res.send(u);
 })
 
 app.get("/web3.min.js", (req, res) => {

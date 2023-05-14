@@ -26,6 +26,12 @@ contract('RealEstate', (accounts) => {
     assert.equal(c.location, "Kisumu");
 
   })
+  // it("should be able to display the properties of changeOwnership", async() => {
+  //   await a.addProperty("Kisumu", "1", "image4");
+  //   let c = await a.properties(1);
+  //   assert.equal(c.location, "Kisumu");
+
+  // })
 
   
 });

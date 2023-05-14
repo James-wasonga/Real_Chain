@@ -1,23 +1,94 @@
 const formatter = new Intl.NumberFormat('en-US', {style: "currency", currency: "USD"})
 console.log(abi);
 var web3 = new Web3(window.ethereum);
-// const address="0x6ECdb66a0AaB4433A12C00c54403a84df594C8d3";
-// 
-const newAddress = "0x2437438489e2E5A55e6A04e4CA2F5001D5DF28Ce"
-var contract = new web3.eth.Contract(abi, newAddress);
-function upload(){
-    var propertyImage = document.getElementById("propertyImage");
-    const formData = new FormData();
-    formData.append('file', propertyImage.files[0]);
-    console.log("formdata " + JSON.stringify(formData));
-    const options = {
-        method: "POST",
-        body: {file: propertyImage}, 
-        headers: {
-            'Content-Type': 'multipart/form-data'
+
+async function loadWeb3(){
+    if(window.ethereum){
+        try{
+            // await window.ethereum.enable();
+            const accounts = await ethereum.request({method: "eth_requestAccounts"});
+            // window.accounts = accounts;
+            let button = document.getElementById("connectButton");
+            if(accounts.length > 0){
+                button.innerHTML = "My Profile";
+                button.onclick = () => {
+                    window.location.href = "./my-properties.html";
+                }
+
+            }else{
+                button.innerHTML = "Connect wallet";
+                
+            }
+            console.log(button);
+        }catch(error){
+            console.error(error);
         }
     }
-    fetch('./upload', options).then(response => response.text()).then((data) => console.log(data));
+}
+
+loadWeb3();
+// if(window.ethereum){
+//     try{
+//         web3.eth.reques
+//     }catch{
+
+//     }
+// }
+// const address="0x6ECdb66a0AaB4433A12C00c54403a84df594C8d3";
+
+// const newAddress = "0x2437438489e2E5A55e6A04e4CA2F5001D5DF28Ce"
+const newAddress = "0x0dd42a7243B77138c1815526b66A03d7E570663f"
+
+var contract = new web3.eth.Contract(abi, newAddress);
+async function upload(){
+    let dir;
+    var propertyName = document.getElementById("propertyName").value;
+    var propertyPrice = document.getElementById("propertyPrice").value;
+    var propertyImage = document.getElementById("propertyImage");
+    var location = document.getElementById("Location").value;
+    const accounts = await ethereum.request({method: "eth_requestAccounts"});
+    const account = accounts[0];
+    console.log(propertyImage.files);
+    let formData = new FormData();
+    formData.append('files', propertyImage.files[0]);
+    formData.append("name", "Wasonga");
+    // console.log("formdata " + JSON.stringify(formData));
+    console.log(formData)
+
+    const options = {
+        method: "POST",
+        body: formData, 
+        // headers: {
+        //     'Content-Type': 'multipart/form-data'
+        // }
+    }
+    fetch('./upload', options).then(response => response.text()).then((data) => {
+        console.log(data);
+        dir = data;
+        
+        console.log(account);
+        contract.methods.addProperty(location, web3.utils.toWei(propertyPrice, "ether"), data.toString(), propertyName).send({from: account, gasLimit: "1000000"}).then((data) => {
+            alert("property added successfuly");
+            console.log(data);
+        }).catch((e) => {
+            console.log(e);
+        })
+    });
+
+
+    
+    // var propertyImage = upload();
+
+    if(propertyName == "" || location == "" || propertyPrice == "" || propertyImage == ""){
+        alert("please fill in all the details");
+        return;
+    }
+
+    console.log(upload);
+
+    
+
+    
 }
 async function connect(){
     // await window.web3.currentProvider.enable();
@@ -31,17 +102,20 @@ async function connect(){
 async function addProperty(){
     var propertyName = document.getElementById("propertyName").value;
     var propertyPrice = document.getElementById("propertyPrice").value;
-    var propertyImage = document.getElementById("propertyImage").value;
+    var location = document.getElementById("Location").value;
+    // var propertyImage = upload();
 
-    if(propertyName == "" || propertyPrice == "" || propertyImage == ""){
+    if(propertyName == "" || location == "" || propertyPrice == "" || propertyImage == ""){
         alert("please fill in all the details");
         return;
     }
 
+    // console.log(upload);
+
     const accounts = await ethereum.request({method: "eth_requestAccounts"});
     const account = accounts[0];
     console.log(account);
-    contract.methods.addProperty(propertyName, web3.utils.toWei(propertyPrice, "ether"), propertyImage).send({from: account, gasLimit: "1000000"}).then((data) => {
+    contract.methods.addProperty(propertyName, web3.utils.toWei(propertyPrice, "ether"), upload()).send({from: account, gasLimit: "1000000"}).then((data) => {
         alert("property added successfuly");
         console.log(data);
     }).catch((e) => {
@@ -89,13 +163,45 @@ function viewProperties(){
 
 viewProperties();
 
+
+async function viewmyProperties() {
+
+    var myproperties = [];
+    const accounts = await ethereum.request({method: "eth_requestAccounts"});
+    const account = accounts[0];
+    contract.methods.propertyCounter().call().then((data) => {
+        for (let i = 1; i <= data; i++){
+            contract.methods.properties(i).call().then(({image,propertyName, isForSale, location, price, owner}) => {
+
+                if(owner = account){
+                    const ethPrice = web3.utils.fromWei(price.toString(), "ether");
+                    properties.push({i, image, isForSale, location, ethPrice, owner});
+                    document.getElementById("myProps").innerHTML += `
+                    <tr>
+                        <td>${propertyName}</td>
+                        <td>${ethPrice} ETH</td>
+                        <td><button class="w3-button w3-round-xlarge w3-small w3-border w3-border-blue">Make Available</button></td>
+                    </tr>
+                    `
+                }
+                
+            })
+        }
+    })
+    window.properties = myproperties;
+}
+
+viewmyProperties();
+
+
+
 function openPage(i){
     window.location.href = "./details.html?" + i
 }
 
 async function displayPageData(){
  const propertyId = window.location.search.substr(1);
- await contract.methods.properties(propertyId).call().then(function({image, isForSale, location, price, owner}){
+ await contract.methods.properties(propertyId).call().then(function({image, isForSale, location, price, owner, propertyName}){
     // console.log(data);
     propertyPrice = web3.utils.fromWei(price, "ether");
     document.getElementById('details').innerHTML += `
@@ -103,7 +209,11 @@ async function displayPageData(){
             <div class="w3-col l6">
                 <table class="w3-table">
                     <tr>
-                        <td><b>Location</b></td>
+                        <td><b>propertyName</b></td>
+                        <td><small>${propertyName}</small></td>
+                    </tr>
+                    <tr>
+                        <td><b>location</b></td>
                         <td><small>${location}</small></td>
                     </tr>
                     <tr>
