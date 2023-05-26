@@ -1,49 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./w3.css">
+    <link rel="stylesheet" type="text/css" href="./w3.css" />
     <style>
-        a{
-            cursor: pointer;
-        }
+      a {
+        cursor: pointer;
+      }
 
-        .background{
-            background-position:center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 300px;
-        }
+      .background {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="w3-modal" id="successAlert">
+      <div class="w3-modal-content w3-padding w3-animate-zoom w3-white">
+        <h3 class="w3-text-green" id="alertHeading">Success</h3>
+        <hr />
+        <p id="alertParagraph">Property Added successfully</p>
+        <button
+          id="alertButton"
+          class="w3-button w3-green w3-right"
+          onclick="document.getElementById('successAlert').classList.remove('w3-show')"
+        >
+          close
+        </button>
+        <br />
+        <br />
+      </div>
+    </div>
     <div class="w3-bar w3-padding">
-        <span class="w3-bar-item w3-text-blue">
-            <b>REAL CHAIN</b>
-        </span>
-        <a class="w3-bar-item w3-text-blue" href="./index.html">Home</a>
-        <a class="w3-bar-item w3-text-blue" href="./properties.html">Properties</a>
-        <a class="w3-bar-item w3-text-blue" href="./addproperty.html">New Property</a>
-        <div class="w3-right">
-            <button class="w3-btn w3-bar-item w3-blue w3-round" id="connectButton" onclick="connect()">Connect Wallet</button>
-        </div>
+      <span class="w3-bar-item w3-text-blue">
+        <b>REAL CHAIN</b>
+      </span>
+      <a class="w3-bar-item w3-text-blue" href="./index.html">Home</a>
+      <a class="w3-bar-item w3-text-blue" href="./properties.html"
+        >Properties</a
+      >
+      <a class="w3-bar-item w3-text-blue" href="./addproperty.html"
+        >New Property</a
+      >
+      <div class="w3-right">
+        <button
+          class="w3-btn w3-bar-item w3-blue w3-round"
+          id="connectButton"
+          onclick="connect()"
+        >
+          Connect Wallet
+        </button>
+      </div>
     </div>
     <div class="w3-auto">
-        <div class="w3-row-padding w3-stretch" id="myProperties">
-           
-        </div>
+      <h3>properties</h3>
+      <div class="w3-row-padding w3-stretch" id="myProperties"></div>
     </div>
-    
+
     <script src="./web3.min.js"></script>
     <script src="./RealEstate.js"></script>
     <script src="./app.js"></script>
-    <script>
-
-        
-        
-    </script>
-</body>
+    <script></script>
+  </body>
 </html>

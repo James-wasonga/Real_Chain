@@ -1,79 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./w3.css">
+    <link rel="stylesheet" type="text/css" href="./w3.css" />
     <style>
-        body{
-            margin: 0;
-            padding: 0;
-            background-image: url("./images/4.jpg");
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 100%;
-            position: relative;
-        }
-        a{
-            cursor: pointer;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url("./images/4.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: relative;
+      }
+      a {
+        cursor: pointer;
+      }
 
-        .background{
-            background-position:center;
-            /* background-repeat: no-repeat; */
-            background-size: cover;
-            /* height: 100vh; */
-        }
+      .background {
+        background-position: center;
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+        /* height: 100vh; */
+      }
 
-        .overlay{
-            height: 100vh;
+      .overlay {
+        height: 100vh;
 
-            top: 0;
-            bottom: 0;
-            margin: 0;
-            left: 0;
-            right: 0;
-            padding: 0;
-            background-color: rgba(0,0,0,0.7);
-        }
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="overlay">
-        <div class="w3-bar w3-padding">
-            <span class="w3-bar-item w3-text-blue">
-                <b>REAL CHAIN</b>
-            </span>
-            <a class="w3-bar-item w3-text-blue" href="./index.html">Home</a>
-            <a class="w3-bar-item w3-text-blue" href="./properties.html">Properties</a>
-            <a class="w3-bar-item w3-text-blue" href="./addproperty.html">New Property</a>
-            <div class="w3-right">
-                <button class="w3-btn w3-bar-item w3-blue w3-round" id="connectButton" onclick="connect()">Connect Wallet</button>
-            </div>
+      <div class="w3-bar w3-padding">
+        <span class="w3-bar-item w3-text-blue">
+          <b>REAL CHAIN</b>
+        </span>
+        <a class="w3-bar-item w3-text-blue" href="./index.html">Home</a>
+        <a class="w3-bar-item w3-text-blue" href="./properties.html"
+          >Properties</a
+        >
+        <a class="w3-bar-item w3-text-blue" href="./addproperty.html"
+          >New Property</a
+        >
+        <div class="w3-right">
+          <button
+            class="w3-btn w3-bar-item w3-blue w3-round"
+            id="connectButton"
+            onclick="connect()"
+          >
+            Connect Wallet
+          </button>
         </div>
-        <div class="w3-auto">
-            <div class="w3-center">
-                <br>
-                <br>
-                <br>
-            
-                <h1 style="font-weight: 600; color: white;">Welcome to <b class="w3-text-blue">RealChain</b></h1>
-                <p style="font-weight: 400; font-size: 17px !important; color: white;">Our real estate app makes it easy to discover your next home with detailed property listings presented in clear and organized paragraphs. From stunning photos to in-depth descriptions, our app offers everything you need to find the perfect home for you. Start browsing today and find your dream home in just a few clicks.</p>
-                <a href="./properties.html" class="w3-btn w3-blue w3-round-xlarge">Get Started</a>
-            </div>
+      </div>
+      <div class="w3-auto">
+        <div class="w3-center">
+          <br />
+          <br />
+          <br />
+
+          <h1 style="font-weight: 600; color: white">
+            Welcome to <b class="w3-text-blue">RealChain</b>
+          </h1>
+          <p style="font-weight: 600; font-size: 17px !important; color: white">
+            Our real estate app makes it easy to discover your next home with
+            detailed property listings presented in clear and organized
+            paragraphs. From stunning photos to in-depth descriptions, our app
+            offers everything you need to find the perfect home for you. Start
+            browsing today and find your dream home in just a few clicks.
+          </p>
+          <a href="./properties.html" class="w3-btn w3-blue w3-round-xlarge"
+            >Get Started</a
+          >
         </div>
+      </div>
     </div>
-    
-    
+
     <script src="./web3.min.js"></script>
     <script src="RealEstate.js"></script>
     <script src="./app.js"></script>
-    <script>
-
-    </script>
-   
-</body>
+    <script></script>
+  </body>
 </html>
