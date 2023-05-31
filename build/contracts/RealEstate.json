@@ -105,7 +105,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -118,7 +119,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -159,7 +161,8 @@
       "name": "buyProperty",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -8884,12 +8887,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xb59C0F950249B1C7C0a20FD3d9C6b1EBFd77811a",
-      "transactionHash": "0x3fba4ef08a890d8440a149b8c12bfd5dc9963554fb1f24774c47e0e7a5924cc8"
+      "address": "0x22549a3cAF644AC809db43ee2f0ccac8c69A7EfD",
+      "transactionHash": "0xb99a5145f131d549e500f6e984f72db1bbf7e9b53fcf1b9d28b66840d827f422"
     }
   },
   "schemaVersion": "3.4.14",
-  "updatedAt": "2023-05-31T01:09:02.909Z",
+  "updatedAt": "2023-05-31T07:57:47.064Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

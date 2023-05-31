@@ -44,7 +44,8 @@ loadWeb3();
 // const newAddress = "0xEc580fA6004Cb4E4F9BDe56C61Ea59F0f79B47D2"
 // const newAddress = "0x599DcB2585B644851191627b3Ed96bb9203be0B2"
 // const newAddress = "0x411eAac8281505AFEDb04598282297F52D662745"
-const newAddress = "0x497b0dE910b4c219f6dd2346405bE9B4dFB65626";
+// const newAddress = "0x497b0dE910b4c219f6dd2346405bE9B4dFB65626";
+const newAddress = " 0xb59C0F950249B1C7C0a20FD3d9C6b1EBFd77811a";
 
 var contract = new web3.eth.Contract(abi, newAddress);
 async function upload() {
@@ -133,8 +134,8 @@ async function connect() {
 }
 
 async function addProperty() {
-  //   var propertyName = document.getElementById("propertyName").value;
-  //   var propertyPrice = document.getElementById("propertyPrice").value;
+  //  var propertyName = document.getElementById("propertyName").value;
+  //    var propertyPrice = document.getElementById("propertyPrice").value;
   //   var location = document.getElementById("Location").value;
   //   // var propertyImage = upload();
   //   if (
