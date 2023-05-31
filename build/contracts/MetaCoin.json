@@ -72,8 +72,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -92,8 +91,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"getBalanceInEth\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"sendCoin\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"sufficient\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/MetaCoin.sol\":\"MetaCoin\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ConvertLib.sol\":{\"keccak256\":\"0x73ae5daf38cef18c4ed5e71366d1ca2182501f7a0fcd5850ad6a14133c2d41ec\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://726110f7945859a2ef9bd565d9d0faf0bfac71b9ab719ca9d7bfd435696cc2d6\",\"dweb:/ipfs/QmWJxwHofQuoh8PybPUQZFaFWW4TxEJfnonY18YftfhgeC\"]},\"project:/contracts/MetaCoin.sol\":{\"keccak256\":\"0x3e77a395c77747df0534d62ba96877a13c61000a3514e340371193d2a5bf4a01\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5b9b2e8142b3ba46ea2fd94a71727fec785befbf6b8480ca6c26547bf2a132cd\",\"dweb:/ipfs/QmZkw7SMFqaqWHgdLrnG5WiK5m2gapBfierDY1gjn9ELf6\"]}},\"version\":1}",
@@ -2726,7 +2724,7 @@
   "sourceMap": "320:691:1:-:0;;;462:51;;;;;;;;;;503:5;481:8;:19;490:9;481:19;;;;;;;;;;;;;;;:27;;;;320:691;;;;;;",
   "deployedSourceMap": "320:691:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;793:119;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;518:270;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;917:91;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;793:119;852:4;869:10;:18;888:16;899:4;888:10;:16::i;:::-;905:1;869:38;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;862:45;;793:119;;;:::o;518:270::-;582:15;631:6;608:8;:20;617:10;608:20;;;;;;;;;;;;;;;;:29;604:47;;;646:5;639:12;;;;604:47;680:6;656:8;:20;665:10;656:20;;;;;;;;;;;;;;;;:30;;;;;;;:::i;:::-;;;;;;;;713:6;691:8;:18;700:8;691:18;;;;;;;;;;;;;;;;:28;;;;;;;:::i;:::-;;;;;;;;750:8;729:38;;738:10;729:38;;;760:6;729:38;;;;;;:::i;:::-;;;;;;;;779:4;772:11;;518:270;;;;;:::o;917:91::-;971:4;989:8;:14;998:4;989:14;;;;;;;;;;;;;;;;982:21;;917:91;;;:::o;88:117:3:-;197:1;194;187:12;334:126;371:7;411:42;404:5;400:54;389:65;;334:126;;;:::o;466:96::-;503:7;532:24;550:5;532:24;:::i;:::-;521:35;;466:96;;;:::o;568:122::-;641:24;659:5;641:24;:::i;:::-;634:5;631:35;621:63;;680:1;677;670:12;621:63;568:122;:::o;696:139::-;742:5;780:6;767:20;758:29;;796:33;823:5;796:33;:::i;:::-;696:139;;;;:::o;841:329::-;900:6;949:2;937:9;928:7;924:23;920:32;917:119;;;955:79;;:::i;:::-;917:119;1075:1;1100:53;1145:7;1136:6;1125:9;1121:22;1100:53;:::i;:::-;1090:63;;1046:117;841:329;;;;:::o;1176:77::-;1213:7;1242:5;1231:16;;1176:77;;;:::o;1259:118::-;1346:24;1364:5;1346:24;:::i;:::-;1341:3;1334:37;1259:118;;:::o;1383:222::-;1476:4;1514:2;1503:9;1499:18;1491:26;;1527:71;1595:1;1584:9;1580:17;1571:6;1527:71;:::i;:::-;1383:222;;;;:::o;1611:122::-;1684:24;1702:5;1684:24;:::i;:::-;1677:5;1674:35;1664:63;;1723:1;1720;1713:12;1664:63;1611:122;:::o;1739:139::-;1785:5;1823:6;1810:20;1801:29;;1839:33;1866:5;1839:33;:::i;:::-;1739:139;;;;:::o;1884:474::-;1952:6;1960;2009:2;1997:9;1988:7;1984:23;1980:32;1977:119;;;2015:79;;:::i;:::-;1977:119;2135:1;2160:53;2205:7;2196:6;2185:9;2181:22;2160:53;:::i;:::-;2150:63;;2106:117;2262:2;2288:53;2333:7;2324:6;2313:9;2309:22;2288:53;:::i;:::-;2278:63;;2233:118;1884:474;;;;;:::o;2364:90::-;2398:7;2441:5;2434:13;2427:21;2416:32;;2364:90;;;:::o;2460:109::-;2541:21;2556:5;2541:21;:::i;:::-;2536:3;2529:34;2460:109;;:::o;2575:210::-;2662:4;2700:2;2689:9;2685:18;2677:26;;2713:65;2775:1;2764:9;2760:17;2751:6;2713:65;:::i;:::-;2575:210;;;;:::o;2791:126::-;2886:24;2904:5;2886:24;:::i;:::-;2881:3;2874:37;2791:126;;:::o;2923:85::-;2968:7;2997:5;2986:16;;2923:85;;;:::o;3014:60::-;3042:3;3063:5;3056:12;;3014:60;;;:::o;3080:158::-;3138:9;3171:61;3189:42;3198:32;3224:5;3198:32;:::i;:::-;3189:42;:::i;:::-;3171:61;:::i;:::-;3158:74;;3080:158;;;:::o;3244:155::-;3347:45;3386:5;3347:45;:::i;:::-;3342:3;3335:58;3244:155;;:::o;3405:372::-;3542:4;3580:2;3569:9;3565:18;3557:26;;3593:79;3669:1;3658:9;3654:17;3645:6;3593:79;:::i;:::-;3682:88;3766:2;3755:9;3751:18;3742:6;3682:88;:::i;:::-;3405:372;;;;;:::o;3783:143::-;3840:5;3871:6;3865:13;3856:22;;3887:33;3914:5;3887:33;:::i;:::-;3783:143;;;;:::o;3932:351::-;4002:6;4051:2;4039:9;4030:7;4026:23;4022:32;4019:119;;;4057:79;;:::i;:::-;4019:119;4177:1;4202:64;4258:7;4249:6;4238:9;4234:22;4202:64;:::i;:::-;4192:74;;4148:128;3932:351;;;;:::o;4289:180::-;4337:77;4334:1;4327:88;4434:4;4431:1;4424:15;4458:4;4455:1;4448:15;4475:191;4515:4;4535:20;4553:1;4535:20;:::i;:::-;4530:25;;4569:20;4587:1;4569:20;:::i;:::-;4564:25;;4608:1;4605;4602:8;4599:34;;;4613:18;;:::i;:::-;4599:34;4658:1;4655;4651:9;4643:17;;4475:191;;;;:::o;4672:305::-;4712:3;4731:20;4749:1;4731:20;:::i;:::-;4726:25;;4765:20;4783:1;4765:20;:::i;:::-;4760:25;;4919:1;4851:66;4847:74;4844:1;4841:81;4838:107;;;4925:18;;:::i;:::-;4838:107;4969:1;4966;4962:9;4955:16;;4672:305;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\n// Tells the Solidity compiler to compile only from v0.8.13 to v0.9.0\r\npragma solidity ^0.8.13;\r\n\r\nimport \"./ConvertLib.sol\";\r\n\r\n// This is just a simple example of a coin-like contract.\r\n// It is not ERC20 compatible and cannot be expected to talk to other\r\n// coin/token contracts.\r\n\r\ncontract MetaCoin {\r\n\tmapping (address => uint) balances;\r\n\r\n\tevent Transfer(address indexed _from, address indexed _to, uint256 _value);\r\n\r\n\tconstructor() {\r\n\t\tbalances[tx.origin] = 10000;\r\n\t}\r\n\r\n\tfunction sendCoin(address receiver, uint amount) public returns(bool sufficient) {\r\n\t\tif (balances[msg.sender] < amount) return false;\r\n\t\tbalances[msg.sender] -= amount;\r\n\t\tbalances[receiver] += amount;\r\n\t\temit Transfer(msg.sender, receiver, amount);\r\n\t\treturn true;\r\n\t}\r\n\r\n\tfunction getBalanceInEth(address addr) public view returns(uint){\r\n\t\treturn ConvertLib.convert(getBalance(addr),2);\r\n\t}\r\n\r\n\tfunction getBalance(address addr) public view returns(uint) {\r\n\t\treturn balances[addr];\r\n\t}\r\n}\r\n",
-  "sourcePath": "C:\\Users\\Felabs\\Desktop\\Real_Chain\\contracts\\MetaCoin.sol",
+  "sourcePath": "C:\\Users\\USER\\Desktop\\Real_Chain\\contracts\\MetaCoin.sol",
   "ast": {
     "absolutePath": "project:/contracts/MetaCoin.sol",
     "exportedSymbols": {
@@ -3909,15 +3907,14 @@
     "5777": {
       "events": {},
       "links": {
-        "ConvertLib": "0xc443Cb51137F4f64e4A42042D74b2AA37742a22e"
+        "ConvertLib": "0x252226Bd1A20370e885f13969C346008940bc8ad"
       },
-      "address": "0x8b8Fb7687Db5111d2E6C7575722362bA37B43BA4",
-      "transactionHash": "0xf910baab3beb42377f050bce4e4ada9fa15450417b3d10ad47f67c13acb5f8a0"
+      "address": "0xC5feC004936EA66b603114Fc693ABBd5252E1fAA",
+      "transactionHash": "0x1fdbc442d5e77d624d830ede003f87b142d124fde9a670908be524dd2d1e9e5d"
     }
   },
-  "schemaVersion": "3.4.13",
-  "updatedAt": "2023-05-24T11:50:28.113Z",
-  "networkType": "ethereum",
+  "schemaVersion": "3.4.14",
+  "updatedAt": "2023-05-31T01:09:02.623Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

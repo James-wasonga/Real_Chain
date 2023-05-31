@@ -23,8 +23,7 @@
         }
       ],
       "stateMutability": "pure",
-      "type": "function",
-      "constant": true
+      "type": "function"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"conversionRate\",\"type\":\"uint256\"}],\"name\":\"convert\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"convertedAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ConvertLib.sol\":\"ConvertLib\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ConvertLib.sol\":{\"keccak256\":\"0x73ae5daf38cef18c4ed5e71366d1ca2182501f7a0fcd5850ad6a14133c2d41ec\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://726110f7945859a2ef9bd565d9d0faf0bfac71b9ab719ca9d7bfd435696cc2d6\",\"dweb:/ipfs/QmWJxwHofQuoh8PybPUQZFaFWW4TxEJfnonY18YftfhgeC\"]}},\"version\":1}",
@@ -1138,7 +1137,7 @@
   "sourceMap": "202:161:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "202:161:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;224:136;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;296:20;341:14;332:6;:23;;;;:::i;:::-;325:30;;224:136;;;;:::o;88:117:3:-;197:1;194;187:12;334:77;371:7;400:5;389:16;;334:77;;;:::o;417:122::-;490:24;508:5;490:24;:::i;:::-;483:5;480:35;470:63;;529:1;526;519:12;470:63;417:122;:::o;545:139::-;591:5;629:6;616:20;607:29;;645:33;672:5;645:33;:::i;:::-;545:139;;;;:::o;690:474::-;758:6;766;815:2;803:9;794:7;790:23;786:32;783:119;;;821:79;;:::i;:::-;783:119;941:1;966:53;1011:7;1002:6;991:9;987:22;966:53;:::i;:::-;956:63;;912:117;1068:2;1094:53;1139:7;1130:6;1119:9;1115:22;1094:53;:::i;:::-;1084:63;;1039:118;690:474;;;;;:::o;1170:126::-;1265:24;1283:5;1265:24;:::i;:::-;1260:3;1253:37;1170:126;;:::o;1302:238::-;1403:4;1441:2;1430:9;1426:18;1418:26;;1454:79;1530:1;1519:9;1515:17;1506:6;1454:79;:::i;:::-;1302:238;;;;:::o;1546:180::-;1594:77;1591:1;1584:88;1691:4;1688:1;1681:15;1715:4;1712:1;1705:15;1732:348;1772:7;1795:20;1813:1;1795:20;:::i;:::-;1790:25;;1829:20;1847:1;1829:20;:::i;:::-;1824:25;;2017:1;1949:66;1945:74;1942:1;1939:81;1934:1;1927:9;1920:17;1916:105;1913:131;;;2024:18;;:::i;:::-;1913:131;2072:1;2069;2065:9;2054:20;;1732:348;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.13;\r\n\r\n// A library is like a contract with reusable code, which can be called by other contracts.\r\n// Deploying common code can reduce gas costs.\r\nlibrary ConvertLib{\r\n\tfunction convert(uint amount, uint conversionRate) public pure returns (uint convertedAmount)\r\n\t{\r\n\t\treturn amount * conversionRate;\r\n\t}\r\n}\r\n",
-  "sourcePath": "C:\\Users\\Felabs\\Desktop\\Real_Chain\\contracts\\ConvertLib.sol",
+  "sourcePath": "C:\\Users\\USER\\Desktop\\Real_Chain\\contracts\\ConvertLib.sol",
   "ast": {
     "absolutePath": "project:/contracts/ConvertLib.sol",
     "exportedSymbols": {
@@ -1357,13 +1356,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xc443Cb51137F4f64e4A42042D74b2AA37742a22e",
-      "transactionHash": "0xd8ef98bd18b18fe91e1593d24467a5956a6a5a55307ce0a19561d15d9c13efd2"
+      "address": "0x252226Bd1A20370e885f13969C346008940bc8ad",
+      "transactionHash": "0x09987ba4a8c3d99da28228657ffc8350b2fc1e6b93bcc71c8bbd713dd61e480a"
     }
   },
-  "schemaVersion": "3.4.13",
-  "updatedAt": "2023-05-24T11:50:28.105Z",
-  "networkType": "ethereum",
+  "schemaVersion": "3.4.14",
+  "updatedAt": "2023-05-31T01:09:02.251Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
