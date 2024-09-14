@@ -2,6 +2,7 @@
 
 ## Overview
 RealChain is a decentralized real estate platform built on the Ethereum blockchain that revolutionizes the process of buying, selling, and managing properties. By leveraging blockchain technology, RealChain aims to address the challenges of transparency, trust, and efficiency in the real estate industry. Users can view, select, and purchase property directly on the platform while benefiting from immutable property records and automated processes via smart contracts.
+![Screenshot (521)](https://github.com/user-attachments/assets/37a72419-2b29-4404-9bab-7868355eddee)
 
 ## Problem Statement
 The traditional real estate industry faces several challenges, such as lack of transparency, inefficient intermediaries, and high transaction costs. Buyers and sellers often face issues related to fraud, slow transactions, and opaque pricing. Additionally, there is a lack of trust between parties involved in real estate transactions due to intermediaries, which increases costs and delays. RealChain solves these problems by providing a decentralized solution that eliminates the need for intermediaries, ensures transparency, and reduces the risks of fraud and corruption.
